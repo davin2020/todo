@@ -33,5 +33,18 @@ return function (ContainerBuilder $containerBuilder) {
         return $renderer;
     };
 
+    //new stuff
+    $container['HomepageController'] = DI\Factory('App\Factories\HomepageControllerFactory');
+    $container['DBConnector'] = DI\Factory('App\DBConnector'); //tech a factoy
+    $container['TaskModel'] = DI\Factory('App\Factories\TaskModelFactory');
+
+    $container['MarkCompleteController'] = DI\Factory('App\Factories\MarkCompleteControllerFactory');
+
+    $container['CompletedTasksPageController'] = DI\Factory('App\Factories\CompletedTasksPageControllerFactory');
+
+    $container['SaveTaskController'] = DI\Factory('App\Factories\SaveTaskControllerFactory');
+
+    $container['DeleteTaskController'] = DI\Factory('App\Factories\DeleteTaskControllerFactory');
+
     $containerBuilder->addDefinitions($container);
 };
