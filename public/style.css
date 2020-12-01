@@ -21,3 +21,7 @@ h1 {
 h2 {
     color: #FF8F35;
 }
+
+ul, ol {
+    list-style-position:inside;
+}
